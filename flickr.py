@@ -79,6 +79,7 @@ def scrape_flickr_images(search_text, download_dir, t1=None, t2=None, start_page
                     
                     # 滑鼠點擊該元素
                     actions.move_to_element(second_last_li).click().perform()
+                    time.sleep(8)
                     downloaded_jpg += 1
                     # print("已點擊倒數第二個 <li> 元素")
                 else:
@@ -93,6 +94,7 @@ def scrape_flickr_images(search_text, download_dir, t1=None, t2=None, start_page
 
 if __name__ == "__main__":
     search_query = input("Enter search text: ")
-    output_folder = f"C:\\workspace\\flickr_download\\images\\{search_query}"
-    scrape_flickr_images(search_query, output_folder, "2022/1/1", "2022/12/31", 1)
+    output_folder = f"C:\\workspace\\flickr_downloader\\images\\{search_query}"
+    scrape_flickr_images(search_query, output_folder)
+    # scrape_flickr_images(search_query, output_folder, "2023/1/1", "2023/12/31", 1)
     

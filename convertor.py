@@ -46,10 +46,6 @@ def convert_yolo_to_xml(yolo_file, output_file, image_name, image_width, image_h
             "z_order": "0"
         })
     return polygon
-    # Write the XML tree to the output file
-    tree = ET.ElementTree(root)
-    ET.indent(tree, space="  ", level=0)  # Beautify the XML output
-    tree.write(output_file, encoding="utf-8", xml_declaration=True)
 
 # Example usage
 file_path = "label/annotations.xml"
