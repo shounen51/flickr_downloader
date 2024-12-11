@@ -21,5 +21,7 @@ def delete_images_with_suffix(folder_path, suffix=").jpg"):
                 print(f"無法刪除 {file_path}：{e}")
 
 # 使用範例
-folder_path = "C:\\workspace\\flickr_downloader\\images\\wheelchair"  # 將此替換為你的資料夾路徑
+with open('keyword.txt', 'r') as f:
+    search_query = f.read()
+folder_path = f"data\\{search_query}\\images" 
 delete_images_with_suffix(folder_path)

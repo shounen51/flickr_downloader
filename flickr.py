@@ -94,7 +94,9 @@ def scrape_flickr_images(search_text, download_dir, t1=None, t2=None, start_page
 
 if __name__ == "__main__":
     search_query = input("Enter search text: ")
-    output_folder = f"C:\\workspace\\flickr_downloader\\images\\{search_query}"
+    with open('keyword.txt', 'w') as f:
+        f.write(search_query)
+    output_folder = os.path.abspath(f"data\\{search_query}\\images")
     scrape_flickr_images(search_query, output_folder)
     # scrape_flickr_images(search_query, output_folder, "2023/1/1", "2023/12/31", 1)
     

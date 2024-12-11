@@ -1,6 +1,8 @@
-images/
+data/
 img2label/
-
+keyword.txt
+cvat_labels.txt
+*.pt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
